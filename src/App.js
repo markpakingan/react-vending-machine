@@ -1,24 +1,52 @@
-import logo from './logo.svg';
+// App.js file
+
+import React from 'react';
 import './App.css';
+import VendingMachine from './VendingMachine';
+import { NavLink } from "react-router-dom";
+import { Route, BrowserRouter, useHistory, useLocation} from 'react-router-dom'
+import Soda from './Soda';
+import Chips from './Chips';
+import Freshsardines from './Freshsardines';
+import Home from './Home';
 
 function App() {
+
+  const history = useHistory();
+  const location = useLocation();
+
+  const handleSubmit = () => {
+    history.goBack()
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <main className='appdiv'>
+         
+         {/* <BrowserRouter> */}
+              {location.pathname === "/" && <VendingMachine/>}
+
+              <Route exact path="/soda">
+                <Soda/>
+              </Route>
+              
+              <Route exact path="/chips">
+                <Chips/>
+              </Route>
+              
+              <Route exact path="/freshsardines">
+                <Freshsardines/>
+              </Route>
+              
+              <Route exact path="/">
+                <Home/>
+              </Route>
+              
+              {/* shows the button if the path is not home */}
+              {location.pathname !=="/" && <button onClick={handleSubmit}> Go Back</button>}
+
+         {/* </BrowserRouter> */}
+    </main>  
+   
   );
 }
 
