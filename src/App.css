@@ -1,10 +1,16 @@
-.homepagediv {
+.Vendinghome {
   background-image: url("https://tassivending.com/wp-content/uploads/2018/11/Micro-market-830.jpg");
-  background-size: cover; /* Adjust the image size to cover the entire div */
-  background-position: center; /* Center the background image */
+  background-size: cover;
+  background-position: center; 
+  margin: 500px;
 }
 
 .Navbar a{
   align-content: right;
   margin: 20px;
 }
+
+.Homediv{
+  background-color: yellow;
+}
+

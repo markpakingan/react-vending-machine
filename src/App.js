@@ -8,7 +8,6 @@ import { Route, BrowserRouter, useHistory, useLocation} from 'react-router-dom'
 import Soda from './Soda';
 import Chips from './Chips';
 import Freshsardines from './Freshsardines';
-import Home from './Home';
 
 function App() {
 
@@ -23,8 +22,10 @@ function App() {
     <main className='appdiv'>
          
          {/* <BrowserRouter> */}
-              {location.pathname === "/" && <VendingMachine/>}
 
+              {location.pathname === "/" && <VendingMachine/>}
+              
+             
               <Route exact path="/soda">
                 <Soda/>
               </Route>
@@ -37,9 +38,7 @@ function App() {
                 <Freshsardines/>
               </Route>
               
-              <Route exact path="/">
-                <Home/>
-              </Route>
+            
               
               {/* shows the button if the path is not home */}
               {location.pathname !=="/" && <button onClick={handleSubmit}> Go Back</button>}
