@@ -1,0 +1,30 @@
+/* VendingMachine.css */
+
+.vendingHome {
+    background-image: url("https://tassivending.com/wp-content/uploads/2018/11/Micro-market-830.jpg");
+    padding: 400px; /* Add padding to create some space around the content */
+    background-size: cover;
+  }
+  
+  /* Center the h1 element horizontally */
+  .greeting {
+    background-color: rgba(0, 0, 0, 0.8);;
+    color: white;
+    text-align: center;
+  }
+  
+
+  
+  .vendingNavItem {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+  }
+  
+  .vendingNavItem a {
+    color: yellow;
+    text-decoration: none; /* Remove underline from links */
+  }
+  
